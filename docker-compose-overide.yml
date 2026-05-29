@@ -48,7 +48,7 @@ services:
     command: 
       - gateway
       - run
-      
+      - --insecure
     env_file:
       - .env
     environment:
