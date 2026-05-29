@@ -45,7 +45,10 @@ services:
     # immediately under `docker compose up -d`. We override here to start the
     # gateway, which is the long-running API/health server the Workspace needs.
     # See #360.
-    command: ["gateway", "run", "--insecure"]
+    command: 
+      - gateway
+      - run
+      - --insecure
     env_file:
       - .env
     environment:
